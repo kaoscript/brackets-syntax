@@ -1,18 +1,18 @@
 {
 	"name": "kaoscript.syntax",
-	"title": "kaoscript Syntax Highlighting",
+	"title": "Kaoscript Syntax Highlighting",
 	"description": "Provides kaoscript syntax highlight via a CodeMirror mode for Brackets.",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"author": {
 		"name": "Baptiste Augrain",
 		"email": "daiyam@zokugun.org"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kaoscript/brackets-syntax"
+		"url": "https://github.com/kaoscript/highlight-brackets"
 	},
 	"bugs": {
-		"url": "https://github.com/kaoscript/brackets-syntax/issues"
+		"url": "https://github.com/kaoscript/highlight-brackets/issues"
 	},
 	"license": "MIT",
 	"licenses": [
@@ -23,5 +23,8 @@
 	],
 	"engines": {
 		"brackets": ">=1.0.0"
+	},
+	"scripts": {
+		"build": "git archive --format zip -o kaoscript.syntax.zip master"
 	}
 }

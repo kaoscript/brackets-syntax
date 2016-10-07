@@ -1,6 +1,6 @@
 /**
  * main.js
- * Version 0.1.0
+ * Version 0.2.0
  * October 5th, 2016
  *
  * Copyright (c) 2016 Baptiste Augrain
