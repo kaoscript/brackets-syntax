@@ -2,7 +2,7 @@
 	"name": "kaoscript.syntax",
 	"title": "Kaoscript Syntax Highlighting",
 	"description": "Provides kaoscript syntax highlight via a CodeMirror mode for Brackets.",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"author": {
 		"name": "Baptiste Augrain",
 		"email": "daiyam@zokugun.org"

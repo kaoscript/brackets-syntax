@@ -1,6 +1,6 @@
 /**
  * main.js
- * Version 0.2.0
+ * Version 0.2.1
  * October 5th, 2016
  *
  * Copyright (c) 2016 Baptiste Augrain
@@ -15,7 +15,7 @@ define(function(require, exports, module) {
 	CodeMirror.defineSimpleMode('kaoscript', {
 		start: [
 			{
-				regex: /'/,
+				regex: /"/,
 				token: 'string',
 				next: 'string_dq'
 			},
@@ -48,15 +48,15 @@ define(function(require, exports, module) {
 				next: 'import_line'
 			},
 			{
-				regex: /\b(?:await|break|catch|continue|do|else|export|extern|finally|for|if|include|return|switch|throw|try|unless|until|while|as|by|from|in|is|of|til|to|with|async|extends|final|private|protected|public|static|new)(?!\s*:)\b/,
+				regex: /\b(?:await|break|catch|continue|do|else|export|extern|finally|for|if|include|return|switch|throw|try|unless|until|while|as|by|from|in|is|of|til|to|with|async|extends|final|private|protected|public|static|new)\b(?!\s*:)/,
 				token: 'keyword'
 			},
 			{
-				regex: /\b(?:super|this|Array|array|Boolean|bool|class|enum|Function|func|Number|number|Object|object|RegExp|String|string)(?!\s*:)\b/,
+				regex: /\b(?:super|this|Array|array|Boolean|bool|class|enum|Function|func|Number|number|Object|object|RegExp|String|string)\b(?!\s*:)/,
 				token: 'atom'
 			},
 			{
-				regex: /\b(?:true|false|null|Infinity|NaN)(?!\s*:)\b/,
+				regex: /\b(?:true|false|null|Infinity|NaN)\b(?!\s*:)/,
 				token: 'builtin'
 			},
 			{
@@ -129,7 +129,7 @@ define(function(require, exports, module) {
 				token: ['keyword', null]
 			},
 			{
-				regex: /\bas(?!\s*:)\b/,
+				regex: /\bas\b(?!\s*:)/,
 				token: 'keyword'
 			},
 			{
@@ -148,7 +148,7 @@ define(function(require, exports, module) {
 				next: 'start'
 			},
 			{
-				regex: /\bas(?!\s*:)\b/,
+				regex: /\bas\b(?!\s*:)/,
 				token: 'keyword'
 			},
 			{
@@ -158,12 +158,12 @@ define(function(require, exports, module) {
 		],
 		string_dq: [
 			{
-				regex: /'/,
+				regex: /"/,
 				token: 'string',
 				next: 'start'
 			},
 			{
-				regex: /(?:[^\\']|\\(?:.|$))*/,
+				regex: /(?:[^\\"]|\\(?:.|$))*/,
 				token: 'string'
 			}
 		],
